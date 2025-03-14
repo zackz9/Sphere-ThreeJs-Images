@@ -35,7 +35,7 @@ h1 {
   top: 0;
   left: 0;
 }
-p {
+footer p {
   text-transform: uppercase;
   font-family: "Akkurat Mono", monospace;
   font-size: 18px;
@@ -43,4 +43,109 @@ p {
   position: absolute;
   right: 0;
   bottom: 10px;
+}
+
+.loading-indicator { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+   font-size: 24px; 
+  color: white; 
+}
+.modal { 
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #272626;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00000080;
+  width: 60%;
+  height: 80%;
+  transition: .4s ease-in-out;
+
+}
+.modal img {
+  transition: .4s ease-in-out;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 4px;
+}
+
+.modal-content p {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Akkurat Mono", monospace;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal-content p span:first-of-type {
+  font-size: 14px;
+  text-transform: capitalize;
+
+}
+
+.modal-content button {
+  padding: 12px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.modal-content {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0; */
+}
+
+.modal-content.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 300ms, transform 500ms ease-out;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity 300ms, transform 500ms ease-in;
 }
