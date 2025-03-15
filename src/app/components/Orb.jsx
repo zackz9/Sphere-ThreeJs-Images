@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls, } from "three/examples/jsm/controls/OrbitControls";
+import { gsap } from "gsap";
 
 const Orb = () => {
 
@@ -224,6 +225,9 @@ const Orb = () => {
     sphereRadius,
     backgroundColor,
   ]);
+
+
+  
 
   return <div className="orb" ref={orbRef}>
     {isLoading && <div className="loading-indicator">Loading...</div>}

@@ -64,8 +64,8 @@ footer p {
   padding: 7px;
   border-radius: 5px;
   box-shadow: 0 0 10px #00000080;
-  width: 60%;
-  height: 80%;
+  width: 400px;
+  height: 600px;
   transition: .4s ease-in-out;
 
 }
